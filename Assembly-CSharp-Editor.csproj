@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9E9D0F8E-1871-A3B3-8FCF-7B767D8A9888}</ProjectGuid>
+    <ProjectGuid>{A75FC47F-4E84-1D7D-A4F3-D0674D2B4E88}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Editor\MoveSceneViewCamera.cs" />
@@ -675,14 +678,17 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AdaptivePerformance.Simulator.Extension">
+      <HintPath>Library\ScriptAssemblies\Unity.AdaptivePerformance.Simulator.Extension.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Subsystem.Registration">
+      <HintPath>Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -690,56 +696,68 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    <Reference Include="Unity.AdaptivePerformance.Simulator.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AdaptivePerformance.Simulator.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AdaptivePerformance.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AdaptivePerformance.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AdaptivePerformance">
+      <HintPath>Library\ScriptAssemblies\Unity.AdaptivePerformance.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{C2C5D8F7-2DAF-1FC4-D7E5-6A5CEB2EE409}</Project>
+      <Project>{0E6A7987-0CB8-F888-0A22-54F1E345D877}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{75683885-1CEF-69D7-DF45-31DE051AC5F9}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{3DC58DCF-614B-AAE1-556A-E1F8F51E3C0C}</Project>
+      <Project>{0DEF2198-315D-31D2-196E-64D82B1C71B7}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{E931DBF3-7005-C105-3463-8A7B5BF8BBDE}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{1B472BB8-22F6-70B4-C650-C1A023642753}</Project>
+      <Project>{9D99F76D-3875-24FC-81B7-6AEEF0868FD9}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{F4C3C821-0787-B178-04DF-ADBAD6302788}</Project>
+      <Project>{9BF1224C-E656-AE08-F50E-A6EE76C95887}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{E26B6D54-E33D-FC55-13C6-37EFBC0BC746}</Project>
+      <Project>{B2C4E5BA-D1E8-E7C2-D2E0-0ED26ADA7C1A}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{6C8FDE71-2545-D20D-D8F1-FDD991E71429}</Project>
+      <Project>{47C70D93-FB54-EEFD-EABD-CEF907BCC988}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{1C83BFAB-B7A5-32E2-FB84-F90A77EA42A0}</Project>
+      <Project>{7DE792CE-B5CA-5B33-B76F-8FEBBE9695C7}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{B0F030FC-F17C-A9F0-EEEC-5F02524F80DB}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
+      <Project>{B06522B1-C15A-A259-9CFB-AB0BE93EADF6}</Project>
+      <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{1E82BA35-0024-8A84-AE51-483B369FD19B}</Project>
+      <Project>{0911808C-367A-B6D5-0004-5EC1E1531B28}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{5F729C65-A452-8A89-71CB-AD5A7469A987}</Project>
+      <Project>{FF8206CB-58F1-6FF3-0C8F-268551489A56}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>

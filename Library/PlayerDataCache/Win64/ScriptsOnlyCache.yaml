@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - GameManager
     - Tanks.HUD
     - Tanks.MainMenu
+    - Tanks.SpawnPoints
     - Tanks.TankPlayer
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
@@ -20,6 +21,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -28,8 +31,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.AdaptivePerformance.Editor.dll:
     - UnityEditor.AdaptivePerformance.Editor.AdaptivePerformanceGeneralSettingsPerBuildTarget
-    Unity.AdaptivePerformance.Simulator.Editor.dll:
-    - UnityEditor.AdaptivePerformance.Simulator.Editor.SimulatorProviderSettings
     Unity.AdaptivePerformance.dll:
     - UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
     - UnityEngine.AdaptivePerformance.AdaptivePerformanceManagerSettings
@@ -86,6 +87,10 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 4576}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -169,39 +174,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3052}
     - Class: 114
-      Script: {instanceID: 3060}
+      Script: {instanceID: 3056}
     - Class: 114
       Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 3158}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3230}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3646}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 3970}
+      Script: {instanceID: 3648}
     - Class: 114
       Script: {instanceID: 3974}
     - Class: 114
-      Script: {instanceID: 4150}
+      Script: {instanceID: 3978}
     - Class: 114
-      Script: {instanceID: 4194}
+      Script: {instanceID: 4154}
     - Class: 114
-      Script: {instanceID: 4404}
+      Script: {instanceID: 4198}
     - Class: 114
-      Script: {instanceID: 4620}
+      Script: {instanceID: 4408}
     - Class: 114
-      Script: {instanceID: 4752}
+      Script: {instanceID: 4626}
     - Class: 114
-      Script: {instanceID: 4772}
+      Script: {instanceID: 4758}
     - Class: 114
-      Script: {instanceID: 5090}
+      Script: {instanceID: 4778}
     - Class: 114
-      Script: {instanceID: 18078}
+      Script: {instanceID: 4972}
     - Class: 114
-      Script: {instanceID: 18086}
+      Script: {instanceID: 5098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -851,6 +856,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: OnClickInstantiate
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Tanks
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 00e94708ac94b5a38c9f21b9f89467a6
@@ -1544,6 +1555,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Tanks
+    className: SpawnPoints
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CrcCheckToggle
@@ -1669,6 +1686,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Tanks
+    className: HUD
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1739,18 +1762,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Tanks
-    className: HUD
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Tanks
-    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainScene.unity

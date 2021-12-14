@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F4C3C821-0787-B178-04DF-ADBAD6302788}</ProjectGuid>
+    <ProjectGuid>{9BF1224C-E656-AE08-F50E-A6EE76C95887}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</AssemblyName>
@@ -56,9 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\Editor\PunTeamsInspector.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\Editor\PhotonTeamsManagerInspector.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\Editor\PlayerNumberingInspector.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\Editor\PunTeamsInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\Editor\PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.asmdef" />
@@ -301,20 +301,20 @@
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3Unity3D">
-      <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -682,19 +682,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{6C8FDE71-2545-D20D-D8F1-FDD991E71429}</Project>
+      <Project>{47C70D93-FB54-EEFD-EABD-CEF907BCC988}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{75683885-1CEF-69D7-DF45-31DE051AC5F9}</Project>
+      <Project>{B0F030FC-F17C-A9F0-EEEC-5F02524F80DB}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{1C83BFAB-B7A5-32E2-FB84-F90A77EA42A0}</Project>
+      <Project>{7DE792CE-B5CA-5B33-B76F-8FEBBE9695C7}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{1B472BB8-22F6-70B4-C650-C1A023642753}</Project>
+      <Project>{9D99F76D-3875-24FC-81B7-6AEEF0868FD9}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
   </ItemGroup>
