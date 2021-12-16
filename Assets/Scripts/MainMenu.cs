@@ -13,7 +13,7 @@ namespace Tanks
         private GameObject m_ui;
         private Button m_joinGameButtom;
 
-        private void Awake()
+        void Awake()
         {
             if(instance != null)
             {
@@ -22,7 +22,6 @@ namespace Tanks
             }
 
             instance = this;
-            DontDestroyOnLoad(gameObject);
 
             m_ui = transform.FindAnyChild<Transform>("UI").gameObject;
             m_joinGameButtom = transform.FindAnyChild<Button>("JoinGameButton");

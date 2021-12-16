@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         DontDestroyOnLoad(gameObject);
         instance = this;
 
-        defaultSpawnPoint = new GameObject("Defaule SpaenPoint");
+        defaultSpawnPoint = new GameObject("Defaule SpawnPoint");
         defaultSpawnPoint.transform.position = new Vector3(0, 0, 0);
         defaultSpawnPoint.transform.SetParent(transform, false);
     }
@@ -89,6 +89,16 @@ public class GameManager : MonoBehaviourPunCallbacks
         Debug.Log("Player Instance ID: " + localPlayer.GetInstanceID());
     }
 
+    
+
+    private Transform GetRandomSpawnPoint()
+    {
+        var spawnPoints = GetAllObjectsOfTypeInScene<SpawnPoints>();
+        return spawnPoints.Count == 0
+            ? defaultSpawnPoint.transform
+            : spawnPoints[Random.Range(0, spawnPoints.Count)].transform;
+    }
+
     public static List<GameObject> GetAllObjectsOfTypeInScene<T>()
     {
         var objectsInScene = new List<GameObject>();
@@ -105,14 +115,5 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         return objectsInScene;
     }
-
-    private Transform GetRandomSpawnPoint()
-    {
-        var spawnPoint = GetAllObjectsOfTypeInScene<SpawnPoints>();
-        return spawnPoint.Count == 0
-            ? defaultSpawnPoint.transform
-            : spawnPoint[Random.Range(0, spawnPoint.Count)].transform;
-    }
-
 }
 
